@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "github.com"
+    "url": "https://github.com/18chetanpatel/vue-filter-list"
   },
   "keywords": [
     "filter",
@@ -20,7 +20,10 @@
     "vue2-filters"
   ],
   "dependencies": {
-    "moment": "^2.24.0",
+    "moment": "^2.24.0"
+  },
+  "peerDependecies": {
+    "vue": "^2.0.0"
   },
   "author": "Chetan Patel",
   "license": "MIT"
