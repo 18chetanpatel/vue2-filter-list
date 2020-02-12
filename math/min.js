@@ -1,9 +1,4 @@
 /**
- * @ngdoc filter
- * @name min
- * @kind function
- *
- * @description
  * Math.min will get an array and return the min value. if an expression
  * is provided, will return min value by expression.
  */

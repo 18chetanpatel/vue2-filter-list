@@ -1,9 +1,4 @@
 /**
- * @ngdoc filter
- * @name degrees
- * @kind function
- *
- * @description
  * Convert angle from radians to degrees
  */
 import util from "../util";

@@ -1,9 +1,4 @@
 /**
- * @ngdoc filter
- * @name max
- * @kind function
- *
- * @description
  * Math.max will get an array and return the max value. if an expression
  * is provided, will return max value by expression.
  */

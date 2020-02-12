@@ -1,9 +1,4 @@
 /**
- * @ngdoc filter
- * @name sum
- * @kind function
- *
- * @description
  * Sum up all values within an array
  */
 import util from "../util";

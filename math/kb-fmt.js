@@ -1,9 +1,4 @@
 /**
- * @ngdoc filter
- * @name formatBytes
- * @kind function
- *
- * @description
  * Convert bytes into appropriate display
  * 1024 kilobytes => 1 MB
  */

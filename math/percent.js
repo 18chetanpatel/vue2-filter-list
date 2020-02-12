@@ -1,9 +1,4 @@
 /**
- * @ngdoc filter
- * @name Percent
- * @kind function
- *
- * @description
  * percentage between two numbers
  */
 import util from "../util";

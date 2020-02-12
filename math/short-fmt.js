@@ -1,9 +1,4 @@
 /**
- * @ngdoc filter
- * @name formatBytes
- * @kind function
- *
- * @description
  * Convert number into abbreviations.
  * i.e: K for one thousand, M for Million, B for billion
  * e.g: number of users:235,221, decimal:1 => 235.2 K
