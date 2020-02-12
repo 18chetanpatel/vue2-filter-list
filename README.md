@@ -77,7 +77,7 @@ When used with a module system, you must explicitly install the filters via `Vue
 
 ```js
 import Vue from 'vue'
-import VueFilterList from 'vue-filter-list'
+import VueFilterList from 'vue2-filter-list'
 
 Vue.use(VueFilterList)
 ```
@@ -87,7 +87,7 @@ You don't need to do this when using global script tags.
 To use one of the predefined methods (such as `limitBy`, `filterBy`, `find`, or `orderBy`) in your component, you also need to add `Vue2Filters.mixin` to mixin list:
 
 ```js
-import VueFilterList from 'vue-filter-list'
+import VueFilterList from 'vue2-filter-list'
 
 export default {
   ...
