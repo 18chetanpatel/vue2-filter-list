@@ -1,0 +1,27 @@
+{
+  "name": "vue-filter-list",
+  "version": "1.0.0",
+  "description": "Prebuilt Vue.js filters",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com"
+  },
+  "keywords": [
+    "filter",
+    "filters",
+    "vue",
+    "lodash",
+    "vuejs",
+    "vue-filter-list",
+    "vue2-filters"
+  ],
+  "dependencies": {
+    "moment": "^2.24.0",
+  },
+  "author": "Chetan Patel",
+  "license": "MIT"
+}
