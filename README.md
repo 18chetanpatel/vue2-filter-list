@@ -1054,7 +1054,7 @@ Converts kilobytes into formatted display<br/>
   {{ 12345.67 | number('0.00', { decimalSeparator: '|' }) }} // => 12,345|67
   ```
 
-###dateFormat
+### dateFormat
 
 -Converts date to given format
 
@@ -1065,7 +1065,7 @@ date:new Date()
 {{ date | dateFormat('YYYY-MM-DD')}}
 ```
 
-###json
+### json
 
 -Converts javascript object to json string
 
@@ -1081,10 +1081,10 @@ users : [
 {{ users | json}}
 ```
 
-##Contributing
+## Contributing
 
 If you find a bug or want to contribute to the code or documentation, you can help by submitting an issue or a pull request.
 
 
-##License
+## License
 [MIT](http://opensource.org/licenses/MIT)
