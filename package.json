@@ -25,6 +25,6 @@
   "peerDependecies": {
     "vue": "^2.0.0"
   },
-  "author": "Chetan Patel",
+  "author": "Chetan Patel <18chetanpatel@gmail.com>",
   "license": "MIT"
 }
