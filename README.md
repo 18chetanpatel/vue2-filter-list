@@ -219,7 +219,7 @@ result:
 3 4 1 2
 -->
 ```
-###filterBy
+### filterBy
  - Arguments
     - {Array} [items]
     - {String} [query]
@@ -234,7 +234,7 @@ result:
 <div v-for="user in filterBy(users, 'Bonnie', 'name', 'age')">
 ```
 
-###find
+### find
  - Arguments
     - {Array} [items]
     - {String} [query]
@@ -315,7 +315,7 @@ names : ['John', 'Sebastian', 'Will', 'James']
 <!-- Will print "John, Sebastian, Will, James" -->
 
 ```
-###limitBy
+### limitBy
  - Arguments
     - {Number|Array} [items]
     - {Number} [limit]
@@ -330,7 +330,7 @@ names : ['John', 'Sebastian', 'Will', 'James']
 <div v-for="n in limitBy(10, 4, 2)">{{ n }}</div>
 ```
 
-###orderBy
+### orderBy
  - Arguments
     - {Array} [items]
     - {String} [sortKey]
