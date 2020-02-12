@@ -1,4 +1,4 @@
-# Angular-filter &nbsp;
+# Vue2-filter-list &nbsp;
 Prebuilt filters for Vue.js
 
 ## Table of contents:
