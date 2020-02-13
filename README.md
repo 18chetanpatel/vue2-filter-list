@@ -587,6 +587,23 @@ text : '<p class="paragraph">Lorem Ipsum is simply dummy text of the printing...
 Lorem Ipsum is simply dummy text of the printing...
 -->
 ```
+### stringular
+get string with {n} and replace match with enumeration values
+
+```html
+<p>{{ 'lorem {0} dolor {1} amet' | stringular('ipsum','sit') }}</p>
+<p>{{ '{3} {0} dolor {1} amet' | stringular('ipsum','sit',null,'lorem') }}</p>
+
+<!-- result:
+<p>lorem ipsum dolor sit amet</p>
+<p>lorem ipsum dolor sit amet</p>
+-->
+
+<p>{{ 'lorem {0} dolor sit amet' | stringular }}<p>
+<!--result:
+<p>lorem {0} dolor sit amet</p>
+```
+
 ### phoneUS
 Format a string or a number into a us-style phone number  
 ```html
