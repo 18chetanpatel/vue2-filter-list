@@ -1,6 +1,6 @@
 {
   "name": "vue2-filter-list",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Prebuilt Vue.js filters",
   "main": "index.js",
   "scripts": {
@@ -10,6 +10,7 @@
     "type": "git",
     "url": "https://github.com/18chetanpatel/vue2-filter-list"
   },
+  "homepage":"https://18chetanpatel.github.io/vue2-filter-list/",
   "keywords": [
     "filter",
     "filters",
