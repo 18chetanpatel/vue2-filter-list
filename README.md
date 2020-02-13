@@ -201,7 +201,7 @@ object : {
 ```
 
 ```html
-<li ng-repeat="elm in concat(array,object)">
+<li v-for="elm in concat(array,object)">
   {{ elm.a }}
 </li>
 
@@ -210,7 +210,7 @@ result:
 1 2 3 4
 -->
 
-<li ng-repeat="elm in concat(object,array)">
+<li v-for="elm in concat(object,array)">
   {{ elm.a }}
 </li>
 
@@ -277,11 +277,11 @@ books : [
 ```
 ```html
 <input type="text" v-model="search" placeholder="search book" />
-<li ng-repeat="book in fuzzy(books,search)">
+<li v-for="book in fuzzy(books,search)">
   {{ book.title }}
 </li>
 <!--case sensitive-->
-<li ng-repeat="book in fuzzy(books,search,true)">
+<li v-for="book in fuzzy(books,search,true)">
   {{ book.title }}
 </li>
 ```
@@ -385,7 +385,7 @@ By default start is 0, increment is 1, and callback is null.
 -->
 ```
 ```html
-<span ng-repeat="i in range([],11,4,2)">{{ i }},</span>
+<span v-for="i in range([],11,4,2)">{{ i }},</span>
 <!--result:
 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24
 -->
@@ -396,7 +396,7 @@ double(i) {
 }
 ```
 ```html
-<span ng-repeat="i in range(11,4,2,double)">{{ i }},</span>
+<span v-for="i in range(11,4,2,double)">{{ i }},</span>
 <!--result:
 8, 12, 16, 20, 24, 28, 32, 36, 40, 44, 48
 -->
@@ -520,14 +520,14 @@ foo bar baz
 get string as parameter and return encoded uri
 
 ```html
-<a ng-href="http://domain.com/fetch/{{ data.name | uriEncode }}">Link</a>
+{{ data.name | uriEncode }}
 ```
 
 ### uriComponentEncode
 get string as parameter and return encoded uri component
 
 ```html
-<a ng-href="http://domain.com/fetch/{{ 'Some&strange=chars' | uriComponentEncode }}">Link</a>
+{{ 'Some&strange=chars' | uriComponentEncode }}
 ```
 
 ### slugify
@@ -577,7 +577,6 @@ usage: ```string | endsWith: 'ends': case-sensitive[optional]```<br/>
 ```
 ### stripTags
 strip out html tags from string<br/>
-**Important: this filter jobs it's not to replace ng-bind-html directive, it's only for tiny plain text
 
 ```js
 text : '<p class="paragraph">Lorem Ipsum is simply dummy text of the printing...</p>'
