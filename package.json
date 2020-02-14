@@ -1,6 +1,6 @@
 {
   "name": "vue2-filter-list",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Prebuilt Vue.js filters",
   "main": "index.js",
   "scripts": {
