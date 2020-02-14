@@ -250,7 +250,6 @@ result:
 ### flatten
 Flattens a nested array (the nesting can be to any depth).<br/>
 If you pass shallow, the array will only be flattened a single level<br/>
-**Usage:** ```collection | flatten: shallow[optional]```
 ```js
 weirdArray : [[], 1, 2, 3, [4, 5, 6, [7, 8, 9, [10, 11, [12, [[[[[13], [[[[14, 15]]]]]]]]]]]]]
 ```
@@ -265,7 +264,7 @@ weirdArray : [[], 1, 2, 3, [4, 5, 6, [7, 8, 9, [10, 11, [12, [[[[[13], [[[[14, 1
 ### fuzzy
 fuzzy string searching(approximate string matching). [Read more](http://en.wikipedia.org/wiki/Approximate_string_matching)<br/>
 **note:** use fuzzyBy to filter by one property to improve performance<br/>
-**Usage:** ```collection | fuzzy: search: caseSensitive[optional]```
+**Usage:** ``` fuzzy(collection,search,caseSensitive[optional])```
 ```js
 books : [
   { title: 'The DaVinci Code', author: 'F. Scott Fitzgerald' },
@@ -301,8 +300,6 @@ get collection or string and return if it empty[Boolean]
 ### join
 Joins the contents of a collection into a string.<br/>
 By default, it will join elements with a *single space*, but you can provide your own delimiter.
-
-**Usage:** ```collection | join:', '```
 
 Example:
 
@@ -365,7 +362,7 @@ Sort primitive values:
 ### range
 Return a new collection from a given length, start, increment, and callback<br/>
 By default start is 0, increment is 1, and callback is null.
-**Usage:** ```collection | range: length:start:increment:callback```<br/>
+**Usage:** ``` range(collection,length,start,increment,callback)```<br/>
 ```html
 <span v-for="i in range([],3)">{{i}},</span>
 <!--result:
@@ -557,7 +554,7 @@ result:
 ```
 ### startsWith
 return whether string starts with the starts parameter.<br/>
-usage: ```string | startsWith: 'start': case-sensitive[optional]```<br/>
+usage: ```string | startsWith('start',case-sensitive[optional])```<br/>
 ```html
  {{ 'Lorem ipsum' | startsWith('lorem') }}
  {{ 'Lorem Ipsum' | startsWith('lorem',true) }}
@@ -567,7 +564,7 @@ usage: ```string | startsWith: 'start': case-sensitive[optional]```<br/>
 ```
 ### endsWith
 return whether string ends with the ends parameter.<br/>
-usage: ```string | endsWith: 'ends': case-sensitive[optional]```<br/>
+usage: ```string | endsWith('ends',case-sensitive[optional])```<br/>
 ```html
  {{ 'image.JPG' | endsWith('.jpg') }}
  {{ 'image.JPG' | endsWith('.jpg', true) }}
@@ -615,7 +612,7 @@ Format a string or a number into a us-style phone number
 
 ### truncate
 truncates a string given a specified length, providing a custom string to denote an omission.<br/>
-usage: ``` | truncate: [length]: [suffix-optional]: [preserve-optinal]```<br/>
+usage: ```string | truncate([length],[suffix-optional], [preserve-optinal])```<br/>
 ```js
 text : 'lorem ipsum dolor sit amet'
 ```
@@ -635,7 +632,7 @@ lorem ipsum dolor sit amet
 ```
 ### split
 truncates a string given a specified length, providing a custom string to denote an omission.<br/>
-usage: ``` | split: [delimiter]: [skip-optional]```<br/>
+usage: ```string | split([delimiter], [skip-optional])```<br/>
 ```js
 text : 'lorem ipsum dolor sit amet'
 ```
@@ -661,7 +658,7 @@ tema tis rolod muspi merol
 ```
 ### wrap
 Wrap a string with another string<br/>
-usage: ```string | wrap: string: string[optional]```
+usage: ```string | wrap(string, string[optional])```
 ```html
 <p>{{ 'foo' | wrap('/') }}</p>
 <p>{{ 'foo' | wrap('{{', '}}') }}</p>
@@ -671,7 +668,6 @@ usage: ```string | wrap: string: string[optional]```
 ```
 ### trim
 Strip whitespace (or other characters) from the beginning and end of a string<br/>
-usage: ```string | trim: chars[optional]```
 ```html
 <p>{{ '    foo   ' | trim }}</p>
 <p>{{ 'foobarfoo' | trim('foo') }}
@@ -681,7 +677,6 @@ bar
 ```
 ### ltrim
 Strip whitespace (or other characters) from the beginning of a string<br/>
-usage: ```string | ltrim: chars[optional]```
 ```html
 <p>{{ 'barfoobar' | ltrim('bar') }}
 <!--result:
@@ -689,7 +684,6 @@ foobar
 ```
 ### rtrim
 Strip whitespace (or other characters) from the end of a string<br/>
-usage: ```string | rtrim: chars[optional]```
 ```html
 <p>{{ 'barfoobar' | rtrim('bar') }}
 <!--result:
@@ -697,7 +691,7 @@ barfoo
 ```
 ### repeat
 Repeats a string n times<br/>
-**Usage:** ```string | repeat: n: separator[optional]```
+**Usage:** ```string | repeat(n, separator[optional])```
 ```html
 <p>{{ 'foo' | repeat(3, '-') }}</p>
 <!--repeat:
@@ -705,7 +699,7 @@ foo-foo-foo
 ```
 ### test
 Test if a string match a pattern<br/>
-**Usage:** ```string | test: pattern: flag[optional]```
+**Usage:** ```string | test(pattern, flag[optional])```
 ```html
 <p>{{ '15/12/2003' | test('^[0-9]{2}[/]{1}[0-9]{2}[/]{1}[0-9]{4}$', 'i') }}</p>
 <p>{{ '0123456' | test('\\D', 'i') }}</p>
@@ -715,7 +709,7 @@ true
 ```
 ### match
 Return an array of matched element in a string<br/>
-**Usage:** ```string | match: pattern: flag[optional]```
+**Usage:** ```string | match(pattern, flag[optional])```
 ```html
 <p>{{ '15/12/2003' | match('\\d+', 'g') }}</p>
 <!--result:
@@ -728,7 +722,7 @@ Return an array of matched element in a string<br/>
 ### max
 max find and return the largest number in a given array.
 if an `expression` is provided, will return max value by expression.
-**Usage:** ```array | max: expression[optional]```
+**Usage:** ```array | max(expression[optional])```
 ```js
 users : [
   { user: { score: 988790 } },
@@ -749,7 +743,7 @@ result:
 ### min
 min find and return the lowest number in a given array.
 if an `expression` is provided, will return min value by expression.
-**Usage:** ```array | min: expression[optional]```
+**Usage:** ```array | min(expression[optional])```
 ```js
 users : [
   { user: { score: 988790 } },
@@ -767,7 +761,6 @@ result:
 ```
 ### abs
 Returns the absolute value of a number
-**Usage:** ```number | string```
 ```html
 <div v-for="val in [-2.2, 1.3, '-3.4', '4.5']">The absolute value of {{val}} is {{val | abs}}</div>
 <!--
@@ -779,7 +772,7 @@ result:
 ```
 ### percent
 Percentage between two numbers<br/>
-**Usage:** ``` number | percent: total: round[optional]```, round by default false.
+**Usage:** ``` number | percent(total, round[optional])```, round by default false.
 ```html
 <p>{{ 23 | percent(500) }}</p>
 <p>{{ 23 | percent(500, true) }}</p>
@@ -789,7 +782,7 @@ Percentage between two numbers<br/>
 ```
 ### radix
 Converting decimal numbers to different bases(radix)<br/>
-**Usage:** ```number | radix: base```
+**Usage:** ```number | radix(base)```
 ```html
 <p>{{ 8 | radix(2)}}</p>
 <p>{{ 32586 | radix(16) }}</p>
@@ -799,7 +792,7 @@ Converting decimal numbers to different bases(radix)<br/>
 ```
 ### sum
 Sum up all values within an array<br/>
-**Usage:** ```array | sum: initial-value[optional]```
+**Usage:** ```array | sum(initial-value[optional])```
 ```html
 {{ [2,3,5] | sum }}
 {{ [2,3,5] | sum(10) }}
@@ -809,7 +802,7 @@ Sum up all values within an array<br/>
 ```
 ### degrees
 Converts radians into degrees<br/>
-**Usage:** ```radians | degrees: round-to-decimal```,
+**Usage:** ```radians | degrees(round-to-decimal)```,
 ```html
 <p>{{ 0.785398 | degrees(0) }}</p>
 <p>{{ -1.57 | degrees(3) }}</p>
@@ -819,7 +812,7 @@ Converts radians into degrees<br/>
 ```
 ### radians
 Converts degrees into radians<br/>
-**Usage:** ```degrees | radians: round-to-decimal```,
+**Usage:** ```degrees | radians(round-to-decimal)```,
 ```html
 <p>{{ 45 | radians(2) }}</p>
 <p>{{ 180 | radians(5) }}</p>
@@ -829,7 +822,7 @@ Converts degrees into radians<br/>
 ```
 ### shortFmt
 Converts numbers into formatted display<br/>
-**Usage:** ```number | shortFmt: round-to-decimal```,
+**Usage:** ```number | shortFmt(round-to-decimal)```,
 ```html
 <p>{{ 45000 | shortFmt(0) }}</p>
 <p>{{ 18234822 | shortFmt(1) }}</p>
@@ -839,7 +832,7 @@ Converts numbers into formatted display<br/>
 ```
 ### byteFmt
 Converts bytes into formatted display<br/>
-**Usage:** ```number | byteFmt: round-to-decimal```,
+**Usage:** ```number | byteFmt(round-to-decimal)```,
 ```html
 <p>{{ 1998 | byteFmt(2) }}</p>
 <p>{{ 1339234901 | byteFmt(5) }}</p>
@@ -849,7 +842,7 @@ Converts bytes into formatted display<br/>
 ```
 ### kbFmt
 Converts kilobytes into formatted display<br/>
-**Usage:** ```number | kbFmt: round-to-decimal```,
+**Usage:** ```number | kbFmt(round-to-decimal)```,
 ```html
 <p>{{ 1024 | kbFmt(0) }}</p>
 <p>{{ 1049901 | kbFmt(5) }}</p>
