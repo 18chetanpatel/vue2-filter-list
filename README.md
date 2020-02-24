@@ -71,7 +71,7 @@ Prebuilt filters for Vue.js
 ## Get Started
 ### NPM 
 ```
-npm install vue2-filters
+npm install vue2-filter-list
 ```
 When used with a module system, you must explicitly install the filters via `Vue.use()`:
 
